@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 450px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+  
+  form input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  li.income {
+    color: green;
+  }
+  
+  li.expense {
+    color: red;
+  }
+  
+  button.delete-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button.delete-btn:hover {
+    color: #c0392b;
+  }
+  
+  .chart-container {
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @media (max-width: 500px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    form input,
+    form button {
+      font-size: 1rem;
+    }
+  
+    ul li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    ul li > div:last-child {
+      margin-top: 8px;
+    }
+  }
+  

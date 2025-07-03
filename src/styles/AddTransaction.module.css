@@ -1,0 +1,91 @@
+/* src/styles/AddTransaction.module.css */
+
+.form {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.formGroup input {
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.8rem;
+  margin: -10px 0 0;
+}
+
+.submitBtn {
+  background-color: var(--accent);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #27672a;
+}
+
+@media (min-width: 600px) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .formGroup {
+    flex: 1;
+  }
+
+  .submitBtn {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .error {
+    grid-column: span 2;
+  }
+}
+
+.itemText em {
+  color: gray;
+  font-size: 0.75rem;
+}
+
+.coinContainer {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  pointer-events: none;
+}

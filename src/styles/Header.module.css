@@ -1,0 +1,29 @@
+/* src/styles/Header.module.css */
+
+.header {
+  background-color: var(--accent);
+  color: var(--text-color);
+  padding: 18px 10px; /* Fixed padding value */
+  text-align: center;
+  font-size: 1.5rem; /* Base font size for fallback */
+  font-weight: 600;
+  width: 100%;
+  max-width: 750px; /* Keeps the layout centered and constrained */
+  height: 95px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center horizontally */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Heading style */
+.header h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.75rem; /* Slightly increased for better visibility */
+  font-weight: 600;
+}

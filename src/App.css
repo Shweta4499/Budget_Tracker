@@ -1,0 +1,126 @@
+:root {
+  --accent: #2e7d32;
+  --danger: #e53935;
+  --text-color: #222;
+  --card-bg: #fff;
+  --bg-color: #f1f1f1;
+  --page-bg: #eeeeee;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --card-bg: #2b2b2b;
+  --bg-color: #1e1e1e;
+  --text-color: #fff;
+  --page-bg: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+.app-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top Control Buttons */
+
+.top-controls {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-buttons button {
+  background-color: var(--accent);
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.top-buttons button:hover {
+  background-color: #27672a;
+}
+
+/* Dashboard Layout */
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  gap: 0; /* ✅ Remove spacing between chart and history */
+  width: 100%;
+  max-width: 750px; /* ✅ Restrict to your preferred width */
+  flex-wrap: wrap;
+  margin-bottom: 0; /* ✅ Ensure no space below */
+  padding-bottom: 0;
+}
+
+/* Optional Panel Class if needed */
+
+.panel {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-top: 0;
+  transition: background-color 0.3s ease;
+}
+
+.add-panel {
+  width: 100%;
+  max-width: 750px;
+  margin-top: 0;
+  padding: 25px;
+}
+
+.add-panel.expand {
+  margin-top:0;
+}
+
+.add-panel.shrink {
+  margin-top:0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-controls {
+    justify-content: center;
+  }
+
+  .top-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .add-panel {
+    padding: 20px;
+  }
+}
